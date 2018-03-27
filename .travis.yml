@@ -1,0 +1,19 @@
+language: php
+
+sudo: false
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+
+php:
+  - 7.1
+  - 7.2
+  - nightly
+
+install:
+  - travis_retry composer install --no-interaction --no-suggest --no-progress --prefer-dist
+
+script:
+  - vendor/bin/parallel-lint -e php --exclude vendor .
+  - vendor/bin/phpstan analyze src/ -l 7
