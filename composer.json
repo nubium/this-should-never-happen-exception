@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=7.1"
+    },
     "require-dev": {
         "phpstan/phpstan": "~0.9",
         "jakub-onderka/php-parallel-lint": "~1.0"
