@@ -10,7 +10,7 @@ There is something which should never happen in every application :)
 ## Usage
 
 ``` php
-switch (3) {
+switch ($oneOrTwoNothingElse) {
     case 1:
         echo 1;
         break;
